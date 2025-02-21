@@ -5,6 +5,14 @@ Project Description
 AI Voting Advisor is a blockchain-based smart contract that provides AI-driven voting recommendations. This contract is designed to suggest voting options using AI models, ensuring an informed decision-making process for users. The contract operates autonomously without requiring direct user inputs.
 
 Smart Contract Details
+// AI Voting Advisor Smart Contract
+pragma solidity ^0.8.0;
+
+contract AIVotingAdvisor {
+    function getVotingRecommendation() public pure returns (string memory) {
+        return "Vote based on AI analysis of historical data and trends.";
+    }
+}
 
 Functionality: Recommends voting options based on AI-driven logic.
 
