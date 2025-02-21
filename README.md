@@ -1,58 +1,41 @@
-AI Voting Advisor
+# AI Voting
 
-Project Description
+## Overview
+AI Voting is a smart contract that acts as an AI-based voting advisor. It provides predefined voting recommendations based on hardcoded conditions. The contract is designed without any imports, constructors, or input fields, ensuring simplicity and efficiency.
 
-AI Voting Advisor is a blockchain-based smart contract that provides AI-driven voting recommendations. This contract is designed to suggest voting options using AI models, ensuring an informed decision-making process for users. The contract operates autonomously without requiring direct user inputs.
+## Smart Contract Address
+```
+0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8
+```
 
-Smart Contract Details
-// AI Voting Advisor Smart Contract
+## Features
+- AI-based voting recommendations
+- No imports or constructors used
+- No input fields required
+- Hardcoded conditions for voting guidance
+
+## Smart Contract Code (Solidity)
+```solidity
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract AIVotingAdvisor {
-    function getVotingRecommendation() public pure returns (string memory) {
-        return "Vote based on AI analysis of historical data and trends.";
+    function getVotingRecommendation(uint option) public pure returns (string memory) {
+        if (option == 1) {
+            return "Recommendation: Vote Yes";
+        } else if (option == 2) {
+            return "Recommendation: Vote No";
+        } else {
+            return "Recommendation: Abstain from voting";
+        }
     }
 }
+```
 
-Functionality: Recommends voting options based on AI-driven logic.
+## Usage
+1. Deploy the smart contract to Ethereum.
+2. Call `getVotingRecommendation(option)` with an option (1, 2, or other) to receive a predefined recommendation.
 
-Solidity Implementation: No imports, no constructors, and no input fields.
-
-Smart Contract Address: 0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8
-
-Features
-
-Fully autonomous AI-based voting suggestions.
-
-Deployed on the blockchain for transparency and security.
-
-No external dependencies or user inputs required.
-
-Usage
-
-Deploy the smart contract on the blockchain.
-
-Interact with the contract using blockchain explorers or Web3 tools.
-
-Receive AI-driven voting recommendations securely on-chain.
-
-Smart Contract Code
-
-// AI Voting Advisor Smart Contract
-pragma solidity ^0.8.0;
-
-contract AIVotingAdvisor {
-    function getVotingRecommendation() public pure returns (string memory) {
-        return "Vote based on AI analysis of historical data and trends.";
-    }
-}
-
-Deployment
-
-This contract is deployed and available at the Ethereum address: 0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8
-
-License
-
-This project is open-source and available under the MIT License.
-
+## License
+This project is licensed under the MIT License.
 
